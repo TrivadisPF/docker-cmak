@@ -24,10 +24,10 @@ RUN mkdir -p /tmp && \
     unzip  -d / ./target/universal/cmak-${CMAK_VERSION}.zip && \
     rm -fr /tmp/* /root/.sbt /root/.ivy2
 
-RUN printf '#!/bin/sh\nexec ./bin/kafka-manager -Dconfig.file=${CMAK_CONFIGFILE} "${CMAK_ARGS}" "${@}"\n' > /cmak-${CMAK_VERSION}/km.sh && \
+RUN printf '#!/bin/sh\nexec ./bin/cmak -Dconfig.file=${CMAK_CONFIGFILE} "${CMAK_ARGS}" "${@}"\n' > /cmak-${CMAK_VERSION}/cmak.sh && \
     chmod +x /cmak-${CMAK_VERSION}/km.sh
 
 WORKDIR /cmak-${CMAK_VERSION}
 
 EXPOSE 9000
-ENTRYPOINT ["./km.sh"]
+ENTRYPOINT ["./cmak.sh"]
