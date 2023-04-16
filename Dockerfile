@@ -1,6 +1,6 @@
 # based on docker image by Clement Laforet <sheepkiller@cultdeadsheep.org>
 
-FROM openjdk:9
+FROM openjdk:11
 
 MAINTAINER Guido Schmutz <guido.schmutz@trivadis.com>
 
