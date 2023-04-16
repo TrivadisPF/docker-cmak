@@ -8,7 +8,7 @@ RUN apt-get update -y && \
     apt-get install -y git wget unzip && \
     apt-get clean all
 
-# when updating the version, make sure to also update the revision !!!
+# when updating the version, make sure to also update the revision !!! you can get it with git log
 ENV ZK_HOSTS=localhost:2181 \
     CMAK_VERSION=3.0.0.6 \
     CMAK_REVISION=4dcc6887bfda73ef3d9b0adcf0d349b631280f0d \
