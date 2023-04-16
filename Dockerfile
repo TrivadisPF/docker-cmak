@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 # when updating the version, make sure to also update the revision !!!
 ENV ZK_HOSTS=localhost:2181 \
     CMAK_VERSION=3.0.0.6 \
-    CMAK_REVISION=afdb8cc303645f51c5a375affd55c544b6bb22e8 \
+    CMAK_REVISION=4dcc6887bfda73ef3d9b0adcf0d349b631280f0d \
     CMAK_CONFIGFILE="conf/application.conf"
 
 RUN mkdir -p /tmp && \
